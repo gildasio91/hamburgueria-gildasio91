@@ -1,0 +1,16 @@
+.products__container {
+    width: 100%;
+    max-width: 100rem;
+    background-color: var(--gray-100);
+    display: flex;
+    gap: 1rem;
+}
+
+@media (min-width: 1023px) {
+    .products__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}

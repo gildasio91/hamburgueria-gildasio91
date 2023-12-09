@@ -1,0 +1,83 @@
+.header {
+  width: 100%;
+  max-width: 100rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2rem;
+  background: var(--gray-0);
+  gap: 1rem;
+
+  .div__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100rem;
+  }
+
+  img {
+    width: 9.375rem;
+    height: 1.42825rem;
+  }
+
+  .form__container {
+    display: flex;
+    border: solid var(--gray-300) 1px;
+    
+   
+    form {
+      display: flex;
+      width: 100%;
+      height: 50%;
+      justify-content:space-between ;
+    }
+
+    input {
+      border: transparent;
+      background-color: inherit;
+      width: 70%;
+      height: 50%;
+    }
+  }
+
+  button {
+    background: transparent;
+    border-color: transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    
+
+    .cartIcon {
+      color: var(--gray-300);
+      font-size: 7rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+    }
+
+    span {
+      width: 0.9rem;
+      height: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.4375rem;
+      background: var(--Green-2, #27ae60);
+      color: #fff;
+      font-family: var(--font-primary);
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 0rem;
+      padding: 0.2rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}

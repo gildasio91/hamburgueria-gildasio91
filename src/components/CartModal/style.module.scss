@@ -1,0 +1,111 @@
+.modalOverlay {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgb(0, 0, 0, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalBox {
+  position: relative;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  height: 30rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  background: #fff;
+}
+
+.modalHeader {
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  background: #27ae60;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem;
+
+  button {
+    background-color: transparent;
+    border-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .buttonCloseCart {
+      color: #ffffff80;
+    }
+  }
+}
+
+.ul__container {
+  width: 100%;
+  gap: 1rem;
+}
+
+.container__totalPrice {
+  margin-top: 1rem;
+  width: 100%;
+  height: 20%;
+  gap: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    height: 50%;
+    display: flex;
+    padding: 0rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.5rem;
+    border-color: transparent;
+    background: #bdbdbd;
+    color: #fff;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+.div__totalPrice {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.span__total {
+  color: var(--grey-600, #333);
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.span__price {
+  color: var(--grey-300, #828282);
+  text-align: right;
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
