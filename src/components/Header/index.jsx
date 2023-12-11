@@ -3,14 +3,14 @@ import Logo from "../../assets/Logo.svg";
 import { MdSearch, MdShoppingCart } from "react-icons/md";
 import styles from "../Header/style.module.scss";
 
-export const Header = ({numberProductsHeader}) => {
+export const Header = ({numberProductsHeader, setIsOpen}) => {
   const [value, setValue] = useState("");
 
   return (
     <header className={styles.header}>
       <div className={styles.div__logo}>
         <img src={Logo} alt="Logo Kenzie Burguer" />
-        <button>
+        <button onClick={() => setIsOpen(true)}>
           <MdShoppingCart className={styles.cartIcon} size={21} />
           <span>{numberProductsHeader}</span>
         </button>

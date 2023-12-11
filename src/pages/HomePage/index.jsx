@@ -33,7 +33,6 @@ export const HomePage = () => {
 
   // adição, exclusão, e exclusão geral do carrinho
   const addProduct = (product) => {
-    setIsOpen(true);
     const hasFavorite = cartList.includes(product);
     if (!hasFavorite) {
       setCartList([...cartList, product]);
@@ -65,7 +64,7 @@ export const HomePage = () => {
 
   return (
     <>
-      <Header numberProductsHeader={numberProductsHeader} />
+      <Header numberProductsHeader={numberProductsHeader} setIsOpen={setIsOpen} />
       <main className={style.mainTeste}>
         <ProductList productList={productList} addProduct={addProduct} />
         {isOpen ? (
