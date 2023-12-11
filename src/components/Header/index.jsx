@@ -3,7 +3,7 @@ import Logo from "../../assets/Logo.svg";
 import { MdSearch, MdShoppingCart } from "react-icons/md";
 import styles from "../Header/style.module.scss";
 
-export const Header = () => {
+export const Header = ({numberProductsHeader}) => {
   const [value, setValue] = useState("");
 
   return (
@@ -12,7 +12,7 @@ export const Header = () => {
         <img src={Logo} alt="Logo Kenzie Burguer" />
         <button>
           <MdShoppingCart className={styles.cartIcon} size={21} />
-          <span>0</span>
+          <span>{numberProductsHeader}</span>
         </button>
       </div>
       <div className={styles.form__container}>
