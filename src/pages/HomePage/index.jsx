@@ -14,15 +14,22 @@ export const HomePage = () => {
   );
   const [isOpen, setIsOpen] = useState(false);
   const [numberProductsHeader, setNumberProductsHeader] = useState(0);
+  const [filteredList, setFilteredList] = useState(productList);
+
+  const filterProducts = (value) => {
+    const filter = productList.filter((item) =>
+      item.name.toLowerCase().includes(value.toLowerCase())
+    );
+    setFilteredList(filter);
+  };
 
   // useEffect montagem - carrega os produtos da API e joga em productList
+  const getHamburguers = async () => {
+    const { data } = await api.get("/products");
 
+    setProductList(data);
+  };
   useEffect(() => {
-    const getHamburguers = async () => {
-      const { data } = await api.get("/products");
-
-      setProductList(data);
-    };
     getHamburguers();
   }, []);
 
@@ -56,17 +63,25 @@ export const HomePage = () => {
   useEffect(() => {
     let numberProductsCart = cartList.length;
     setNumberProductsHeader(numberProductsCart);
-  }, [cartList]);
+  }, [cartList, filteredList]);
 
   // renderizações condições e o estado para exibir ou não o carrinho
   // filtro de busca
   // estilizar tudo com sass de forma responsiva
-
+  // console.log(value);
   return (
     <>
-      <Header numberProductsHeader={numberProductsHeader} setIsOpen={setIsOpen} />
+      <Header
+        numberProductsHeader={numberProductsHeader}
+        setIsOpen={setIsOpen}
+        filterProducts={filterProducts}
+      />
       <main className={style.mainTeste}>
-        <ProductList productList={productList} addProduct={addProduct} />
+        <ProductList
+          productList={productList}
+          addProduct={addProduct}
+          filteredList={filteredList}
+        />
         {isOpen ? (
           <CartModal
             cartList={cartList}
