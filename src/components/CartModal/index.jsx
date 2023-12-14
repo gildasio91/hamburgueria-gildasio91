@@ -32,7 +32,7 @@ export const CartModal = ({
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if(event.key === "Escape"){
+      if (event.key === "Escape") {
         buttonCloseRef.current?.click();
       }
     };
@@ -48,7 +48,7 @@ export const CartModal = ({
         <div className={styles.modalHeader}>
           <h2>Carrinho de compras</h2>
           <button
-          ref={buttonCloseRef}
+            ref={buttonCloseRef}
             aria-label="close"
             title="Fechar"
             onClick={() => setIsOpen(false)}
