@@ -1,27 +1,20 @@
-## Sobre a entrega
+# Site de Hamburgueria com carrinho de Compras
 
-O objetivo desta é implementar um conjunto de funcionalidades e estilização a projeto existente, colocando em prática os conhecimentos aprendidos até aqui.
-Iremos acessar a lista de produto desta API e simularemos um carrinho de compras com React.
-Além disso, para praticar a estilização, a aplicação deverá ser semelhante a este Figma.
+Este projeto é uma simulação de um carrinho de compras desenvolvido com React, com o objetivo de praticar estilização com SASS, consumo de API e gerenciamento de estado. A aplicação foi criada para seguir o design fornecido em um Figma específico e implementa diversas funcionalidades essenciais para uma experiência de compra online.
 
-## Instruções
-Comece realizando o clone do repositório. Diferente da entrega anterior, novamente, não partiremos da estaca zero, por isso, após o clone execute o npm install para baixar as dependências.
+## Funcionalidades Implementadas
 
-### 1. Estilização
-Todos os componentes da aplicação já estão prontos de forma básica, e novamente, utilizaremos o SASS para estilizar este projeto, por isso, o estilo pode ser um excelente ponto de partida. 
-Atente-se que, nessa entrega a responsividade vai ser obrigatória, por isso, chegou o momento de você aplicar tudo que aprendeu até agora.
+1. **Estilização**:
+   - Todos os componentes foram estilizados utilizando SASS, seguindo o design especificado no Figma. A aplicação é completamente responsiva, adaptando-se a diferentes tamanhos de tela para uma experiência de usuário otimizada em dispositivos móveis e desktops.
 
-### 2. Trazendo os produtos da API | Busca
-Um bom primeiro passo na lógica será utilizar o useEffect para trazer os produtos da API, fique atento, já existe um estado adequado para armazenar os produtos e também já foi feito um map do mesmo.
-Com os produtos vindo da API, uma funcionalidade interessante a desenvolver em seguida é a busca, observe que o formulário de busca já captura o que o usuário fornece.
+2. **Trazendo os Produtos da API e Busca**:
+   - Utilizando o hook `useEffect`, os produtos foram buscados de uma API externa e armazenados no estado adequado. Além disso, uma funcionalidade de busca foi implementada para permitir que os usuários filtrem os produtos de acordo com suas preferências.
 
-### 3. Gerenciamento do carrinho | Modal
-De forma muito semelhante ao gerenciamento de transações na entrega anterior, trabalhe na lógica de adicionar e remover itens do carrinho, bem como imprimir os totais. Fique atento, diferente da entrega anterior, os produtos do carrinho virão da própria lista de produtos fornecida pela API.
+3. **Gerenciamento do Carrinho**:
+   - Foi desenvolvida a lógica para adicionar e remover itens do carrinho, com os produtos sendo retirados da lista fornecida pela API. A persistência dos dados do carrinho foi garantida através do uso de `localStorage`, utilizando o `useEffect`.
 
-Nessa etapa, com o gerenciamento funcionando de forma correta, valerá muito a pena utilizar o useEffect para persistir os dados do carrinho no localStorage.
+4. **Modal**:
+   - Implementação de um modal com comportamento simples de abertura e fechamento, utilizando condicionais no JSX para controle de exibição.
+   - O modal foi refinado para fechar ao clicar fora dele ou pressionar a tecla "Esc". Para isso, foram criados hooks personalizados que gerenciam esses comportamentos, aprimorando a experiência do usuário.
 
-### 4. Modal
-Para o modal, será exigido um comportamento simples de abertura e fechamento, aplique seu conhecimento de condicionais no JSX.
 
-### 5. Desafio - Refine o comportamento do seu modal
-Não é obrigatório, mas, caso você consiga, com base no que foi mostrado nos conteúdos extras, aplique os comportamentos de: fechar ao clicar fora e fechar ao clicar na "Esc" em seu modal, de preferência trabalhando com a criação de hooks para cada um destes comportamentos. Você consegue!
