@@ -26,5 +26,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "vite": "^4.5.1"
-  }
+  },
+  "description": "Este projeto é uma simulação de um carrinho de compras desenvolvido com React, com o objetivo de praticar estilização com SASS, consumo de API e gerenciamento de estado. A aplicação foi criada para seguir o design fornecido em um Figma específico e implementa diversas funcionalidades essenciais para uma experiência de compra online.",
+  "main": "vite.config.js",
+  "author": "",
+  "license": "ISC"
 }
